@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-const SettingApp = (props) => {
+const About = (props) => {
   return (
     <Box p={2} m={0}>
       <Grid container spacing={1}>
@@ -16,4 +16,4 @@ const SettingApp = (props) => {
     </Box>
   );
 };
-export default SettingApp;
+export default About;
