@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 
-const About = (props) => {
+const About = () => {
   return (
     <Box p={2} m={0}>
       <Grid container spacing={1}>

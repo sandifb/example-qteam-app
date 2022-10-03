@@ -1,11 +1,17 @@
+import * as React from "react";
+/**
+ * Components
+ */
 import MainApp from "./lib/components/MainApp";
 import SettingApp from "./lib/components/SettingApp";
 import About from "./lib/components/About";
+/**
+ * MUI & Icon
+ */
 import Box from "@mui/material/Box";
-
-import * as React from "react";
-import { Outlet, Link, useRoutes } from "react-router-dom";
 import Typography from "@mui/material/Typography";
+
+import { Outlet, Link, useRoutes } from "react-router-dom";
 
 const AppRoute = () => {
   let routes = useRoutes([
@@ -48,8 +54,9 @@ export default function App() {
 const GetStarted = (props) => {
   return (
     <Box p={2} m={0}>
-      <Typography variant="h1" color="primary">
-        Get Started
+      <Typography variant="h6">Get Started</Typography>
+      <Typography variant="subtitle1" color="initial">
+        This is page for developer.
       </Typography>
     </Box>
   );
