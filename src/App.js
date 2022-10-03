@@ -5,6 +5,8 @@ import * as React from "react";
 import MainApp from "./lib/components/MainApp";
 import SettingApp from "./lib/components/SettingApp";
 import About from "./lib/components/About";
+import IsmailScreen from "./lib/components/IsmailScreen";
+import YuniScreen from "./lib/components/YuniScreen";
 /**
  * MUI & Icon
  */
@@ -19,6 +21,8 @@ const AppRoute = () => {
     { path: "main", element: <MainApp /> },
     { path: "setting", element: <SettingApp /> },
     { path: "about", element: <About /> },
+    { path: "ismail", element: <IsmailScreen /> },
+    { path: "yuni", element: <YuniScreen /> },
   ]);
   return routes;
 };
@@ -41,6 +45,12 @@ export default function App() {
             </li>
             <li style={{ display: "inline", marginRight: 20 }}>
               <Link to="/about">About</Link>
+            </li>
+            <li style={{ display: "inline", marginRight: 20 }}>
+              <Link to="/ismail">Ismail</Link>
+            </li>
+            <li style={{ display: "inline", marginRight: 20 }}>
+              <Link to="/yuni">Yuni</Link>
             </li>
           </ul>
         </nav>
