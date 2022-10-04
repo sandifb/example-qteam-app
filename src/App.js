@@ -5,8 +5,12 @@ import * as React from "react";
 import MainApp from "./lib/components/MainApp";
 import SettingApp from "./lib/components/SettingApp";
 import About from "./lib/components/About";
+<<<<<<< HEAD
 import IsmailScreen from "./lib/components/IsmailScreen";
 import YuniScreen from "./lib/components/YuniScreen";
+=======
+import ReactGoogleChart from "./lib/components/ReactGoogleChart";
+>>>>>>> main
 /**
  * MUI & Icon
  */
@@ -21,8 +25,12 @@ const AppRoute = () => {
     { path: "main", element: <MainApp /> },
     { path: "setting", element: <SettingApp /> },
     { path: "about", element: <About /> },
+<<<<<<< HEAD
     { path: "ismail", element: <IsmailScreen /> },
     { path: "yuni", element: <YuniScreen /> },
+=======
+    { path: "chart", element: <ReactGoogleChart /> },
+>>>>>>> main
   ]);
   return routes;
 };
@@ -47,10 +55,14 @@ export default function App() {
               <Link to="/about">About</Link>
             </li>
             <li style={{ display: "inline", marginRight: 20 }}>
+<<<<<<< HEAD
               <Link to="/ismail">Ismail</Link>
             </li>
             <li style={{ display: "inline", marginRight: 20 }}>
               <Link to="/yuni">Yuni</Link>
+=======
+              <Link to="/chart">Example Chart</Link>
+>>>>>>> main
             </li>
           </ul>
         </nav>
