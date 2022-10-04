@@ -5,6 +5,7 @@ import * as React from "react";
 import MainApp from "./lib/components/MainApp";
 import SettingApp from "./lib/components/SettingApp";
 import About from "./lib/components/About";
+import ReactGoogleChart from "./lib/components/ReactGoogleChart";
 /**
  * MUI & Icon
  */
@@ -19,6 +20,7 @@ const AppRoute = () => {
     { path: "main", element: <MainApp /> },
     { path: "setting", element: <SettingApp /> },
     { path: "about", element: <About /> },
+    { path: "chart", element: <ReactGoogleChart /> },
   ]);
   return routes;
 };
@@ -41,6 +43,9 @@ export default function App() {
             </li>
             <li style={{ display: "inline", marginRight: 20 }}>
               <Link to="/about">About</Link>
+            </li>
+            <li style={{ display: "inline", marginRight: 20 }}>
+              <Link to="/chart">Example Chart</Link>
             </li>
           </ul>
         </nav>
