@@ -3,6 +3,15 @@ import Box from "@mui/material/Box";
 import { Chart } from "react-google-charts";
 import Grid from "@mui/material/Grid";
 
+/**
+ *
+ * Dokumentasi Library :
+ *
+ *  1. https://www.react-google-charts.com/
+ *  2. https://developers.google.com/chart/interactive/docs/quick_start
+ *
+ */
+
 const ReactGoogleChart = (props) => {
   /**
    *
@@ -28,6 +37,11 @@ const ReactGoogleChart = (props) => {
       textStyle: { color: "blue", fontSize: 16 },
     },
     backgroundColor: "#cdf2f7",
+    animation: {
+      startup: true,
+      easing: "linear",
+      duration: 1500,
+    },
   };
 
   /**
@@ -155,6 +169,32 @@ const ReactGoogleChart = (props) => {
     },
   };
 
+  /**
+   *
+   * CHART 5
+   *
+   */
+  const data5 = [
+    ["Task", "Hours per Day"],
+    ["Work", 11],
+    ["Eat", 2],
+    ["Commute", 2],
+    ["Watch TV", 2],
+    ["Sleep", 7],
+  ];
+  const options5 = {
+    title: "My Daily Activities",
+    is3D: true,
+    backgroundColor: "#cdf2f7",
+    pieStartAngle: 90,
+    // sliceVisibilityThreshold: 0.2,
+  };
+
+  const options5a = {
+    title: "My Daily Activities",
+    pieHole: 0.4,
+  };
+
   return (
     <Box p={2} m={0}>
       <Grid container spacing={2} direction="row" justifyContent="space-between" alignItems="flex-start">
@@ -169,6 +209,12 @@ const ReactGoogleChart = (props) => {
         </Grid>
         <Grid item xs="6">
           <Chart chartType="BarChart" width="100%" height="350px" data={data4} options={options4} />
+        </Grid>
+        <Grid item xs="6">
+          <Chart chartType="PieChart" data={data5} options={options5} width={"100%"} height={"400px"} />
+        </Grid>
+        <Grid item xs="6">
+          <Chart chartType="PieChart" data={data5} options={options5a} width={"100%"} height={"400px"} />
         </Grid>
       </Grid>
     </Box>
